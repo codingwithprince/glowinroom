@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from '../../images/logo192.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css';
 import { AiOutlineMenuFold  } from 'react-icons/ai';
 import { Container, Nav, Navbar, NavDropdown, NavItem } from 'react-bootstrap'; import Dropdown from '@restart/ui/esm/Dropdown';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -21,37 +21,42 @@ const Header = () => {
                         </Navbar.Toggle>
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ms-auto">
-                                <Nav.Link href="/">Home</Nav.Link>
-                                <NavDropdown title="Skin" id="basic-nav-dropdown" >
-                                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                <Link to="/">Home</Link>
+                                <NavDropdown title="Skincare" id="basic-nav-dropdown" >
+                                    <NavDropdown.Item href="#action/3.1">Oily Skin</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Dry Skin</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Facial</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Body</NavDropdown.Item>
+                            
                                 </NavDropdown>
-                                <NavDropdown title="Hair" id="basic-nav-dropdown" >
-                                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                <NavDropdown title="Hair Style" id="basic-nav-dropdown" >
+                                    <NavDropdown.Item href="#action/3.1">Hair Care</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Haircut</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Hair Growth</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Hair Styling</NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.4">Natural Hair</NavDropdown.Item>
                                 </NavDropdown>
                                 <NavDropdown title="Makeup" id="basic-nav-dropdown" >
-                                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.1">Face</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Eyes</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Brows</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Lips</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Nails</NavDropdown.Item>
+
+
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.4">Ask a makeup Artist</NavDropdown.Item>
                                 </NavDropdown>
                                 <NavDropdown title="Style" id="basic-nav-dropdown" >
-                                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.1">Cloths</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Trends</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Ornaments</NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.4">Shop Online</NavDropdown.Item>
                                 </NavDropdown>
-                                <Nav.Link href="/reviews">Reviews</Nav.Link>
-                                <Nav.Link href="/about">About</Nav.Link>
+                                <Link className="route-link" to="/reviews">Reviews</Link>
+                                <Link to="/about">About</Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

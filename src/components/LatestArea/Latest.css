@@ -1,0 +1,52 @@
+.section-title{
+    text-align: left;
+    font-weight: 600;
+}
+.latest-tip{
+    padding-top: 15px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px lightgray;
+    text-align: left;
+}
+.latest-tip img{
+    height: 200px;
+    max-width: 100%;
+    transition: 0.5s ease-in-out;
+}
+.latest-tip img:hover{
+    scale: 1.045;
+}
+.category a{
+    font-size: 14px;
+    color: #777;
+    margin-left: 15px;
+    text-decoration: none;
+}
+.title a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #222;
+    padding-left: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.buttondiv{
+    background-color: #FF3659;
+    border-radius: 0 0 5px 5px;
+    border: 3px solid #FF3659;
+    transition: 0.3s ease-in-out;
+}
+.readBtn{
+    padding: 5px 20px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.buttondiv:hover {
+    background-color: #fff;
+}
+.buttondiv:hover > .readBtn{
+    color: #FF3659;
+}
