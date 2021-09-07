@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import './Latest.css';
 
 const infoData = [
-    { title: "get rid of acne.", category: "Skincare", img: "images/skincare/acne.jpg" },
-    { title: "stop hair falling.", category: "Hair Style", img: "images/hairstyle/hairfall.jpg" },
+    { title: "get rid of acne fast.",  category: "Skincare", img: "images/skincare/acne.jpg" },
+    { title: "stop hair falling now.", category: "Hairstyle", img: "images/hairstyle/hairfall.jpg" },
     { title: "Make your teeth white.", category: "Skincare", img: "images/skincare/teeth.jpg" },
     { title: "Top 10 trending style.", category: "Style", img: "images/style/trend.jpg" },
-    { title: "Wedding makeup tutorials.", category: "Makeup", img: "images/makeup/makeup.jpeg" },
+    { title: "makeup tutorials.", category: "Makeup", img: "images/makeup/makeup.jpeg" },
     { title: "Remove facial hair.", category: "Skincare", img: "images/skincare/skincare.jpg" }
 ]
 
@@ -33,24 +33,21 @@ const Latest = () => {
 };
 
 const LatestDesign = (props) => {
+    const {img, title, category} = props;
     return (
-        <Col lg="4" md="6" sm="12" >
-            <div className="latest-tip">
-                <div className="latest-img d-flex justify-content-center">
-                    <img src={props.img} alt="" />
+        <Col lg="4" md="6" sm="12">
+            <Link className="fullLink" to={props.category}>
+                <div className="latest-tip">
+                    <div className="latest-img img-fluid d-flex justify-content-center">
+                        <img src={img} alt="" />
+                    </div>
+                    <div className="latest-info">
+                        <p className="category">{category}</p>
+                        <h3 className="title">{title}</h3>
+                    </div>
+                    <p className="des">Click here to read the article.</p>
                 </div>
-                <div className="latest-info">
-                    <p className="category">
-                        <Link to="/skincare">{props.category}</Link>
-                    </p>
-                    <p className="title">
-                        <Link to="/">{props.title}</Link>
-                    </p>
-                </div>
-                <div className="buttondiv d-flex justify-content-center">
-                     <Link className="readBtn text-center" to="/">Read Article</Link>
-                </div>
-            </div>
+            </Link>
         </Col>
     )
 }

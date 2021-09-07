@@ -32,20 +32,20 @@ const Skincare = () => {
 };
 
 const SkincareDesign = (props) => {
+    const {img, title, category} = props
     return (
-        <Col lg="3" md="6" sm="6" >
+        <Col lg="3" md="6" sm="6" xs="6">
+            <Link to={category} className="link">
             <div className="skincare-tip">
                 <div className="skincare-img d-flex justify-content-center">
-                    <img src={props.img} alt="" />
+                    <img src={img} className="img-fluid " alt="" />
                     <div className="overlay">
-                        <p>{props.title}</p>
+                        <p>{title}</p>
                     </div>
-                    
                 </div>
-                <p className="sk-title">
-                    <Link to="/">{props.title}</Link>
-                </p>
+                <p className="sc-title">{title}</p>
             </div>
+            </Link>
         </Col>
     )
 }
