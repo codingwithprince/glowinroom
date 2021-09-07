@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import './Latest.css';
 
 const infoData = [
-    { title: "get rid of acne fast.",  category: "Skincare", img: "images/skincare/acne.jpg" },
-    { title: "stop hair falling now.", category: "Hairstyle", img: "images/hairstyle/hairfall.jpg" },
-    { title: "Make your teeth white.", category: "Skincare", img: "images/skincare/teeth.jpg" },
-    { title: "Top 10 trending style.", category: "Style", img: "images/style/trend.jpg" },
-    { title: "makeup tutorials.", category: "Makeup", img: "images/makeup/makeup.jpeg" },
-    { title: "Remove facial hair.", category: "Skincare", img: "images/skincare/skincare.jpg" }
+    { title: "get rid of acne fast.",  credit: "pexel.com",  category: "Skincare", img: "images/skincare/acne.jpg" },
+    { title: "stop hair falling now.", credit: "pexel.com",  category: "Hairstyle", img: "images/hairstyle/hairfall.jpg" },
+    { title: "Make your teeth white.", credit: "pexel.com",  category: "Skincare", img: "images/skincare/teeth.jpg" },
+    { title: "Top 10 trending style.", credit: "pexel.com",  category: "Style", img: "images/style/trend.jpg" },
+    { title: "makeup tutorials.", credit: "pexel.com", category: "Makeup", img: "images/makeup/makeup.jpeg" },
+    { title: "Remove facial hair.",credit: "pexel.com",  category: "Skincare", img: "images/skincare/skincare.jpg" }
 ]
 
 const Latest = () => {
@@ -22,7 +22,7 @@ const Latest = () => {
                     <div className="latest-tips">
                         <Row>
                             {
-                                infoData.map(data => <LatestDesign title={data.title} category={data.category} img={data.img} />)
+                                infoData.map(data => <LatestDesign title={data.title} category={data.category} img={data.img} credit={data.credit} />)
                             }
                         </Row>
                     </div>
@@ -33,15 +33,16 @@ const Latest = () => {
 };
 
 const LatestDesign = (props) => {
-    const {img, title, category} = props;
+    const {img, title, category, credit} = props;
     return (
         <Col lg="4" md="6" sm="12">
-            <Link className="fullLink" to={props.category}>
+            <Link className="fullLink" to={category}>
                 <div className="latest-tip">
                     <div className="latest-img img-fluid d-flex justify-content-center">
                         <img src={img} alt="" />
                     </div>
                     <div className="latest-info">
+                        <p className="credit"><small>Photo Credit:  {credit}</small></p>
                         <p className="category">{category}</p>
                         <h3 className="title">{title}</h3>
                     </div>

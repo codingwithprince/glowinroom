@@ -6,12 +6,17 @@ import { Container, Nav, Navbar, NavDropdown, NavItem } from 'react-bootstrap'; 
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+   
+    const collapseHandler =() => {
+      const element =  document.getElementById('basic-navbar-nav');
+      element.classList.remove('show');
+    }
 
 
     return (
         <div className="header-area">
-            <div className="navbar-area">
-                <Navbar className="navbar" collapseOnSelect expand="lg">
+            <div className="navbar-area" >
+                <Navbar sticky="top" fixed="top" className="navbar " collapseOnSelect expand="lg">
                     <Container>
                         <Navbar.Brand href="#home">GlowinRoom</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -21,13 +26,12 @@ const Header = () => {
                         </Navbar.Toggle>
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ms-auto">
-                                <Link to="/">Home</Link>
+                                <Link to="/" className="navbarItem" onClick={collapseHandler}>Home</Link>
                                 <NavDropdown title="Skincare" id="basic-nav-dropdown" >
-                                    <NavDropdown.Item href="#action/3.1">Oily Skin</NavDropdown.Item>
+                                    <NavDropdown.Item href="/skincare">Oily Skin</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Dry Skin</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Facial</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Body</NavDropdown.Item>
-                            
                                 </NavDropdown>
                                 <NavDropdown title="Hair Style" id="basic-nav-dropdown" >
                                     <NavDropdown.Item href="#action/3.1">Hair Care</NavDropdown.Item>
@@ -55,8 +59,8 @@ const Header = () => {
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item href="#action/3.4">Shop Online</NavDropdown.Item>
                                 </NavDropdown>
-                                <Link className="route-link" to="/reviews">Reviews</Link>
-                                <Link to="/about">About</Link>
+                                <Link to="/reviews" onClick={collapseHandler}>Reviews</Link>
+                                <Link to="/about" onClick={collapseHandler}>About</Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
