@@ -1,49 +1,57 @@
 .section-title{
     text-align: left;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 .latest-tip{
-    padding-top: 15px;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: left;
+    margin-top: 10px;
+    padding: 10px 0;
+    transition: 0.3s ease-in;
+}
+.latest-tip:hover{
+    background-color: rgb(246, 246, 246);
 }
 .latest-img img{
-    max-width: 100%;
-    transition: 0.5s ease-in-out;
-}
-.latest-tip img:hover{
-    scale: 1.045;
-    border-radius: 5px;
-}
-.fullLink{
-    text-decoration: none;
+    max-height: 200px;
 }
 .latest-info{
-   padding-left: 10px;
-   padding-top: 10px;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 10px;
 }
-.category {
-    font-size: 14px;
-    color: #777;
-    text-decoration: none;
+.innerInfo{
+    text-transform: capitalize;
 }
-.title {
-    text-decoration: none;
+.title{
     color: #222;
     font-weight: 600;
-    text-transform: capitalize;
 }
-.des{
-    text-transform: capitalize;
+.category{
     color: #ff3659;
-    text-align: center;
-    padding-top: 10px;
-    font-size: 13px;
+    font-size: 15px;
+}
+.category:hover{
+    text-decoration: underline;
 }
 .credit{
     color: #444;
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: capitalize;
+    font-size: 16px;
+}
+.des{
+    font-size: 14px;
+}
+.des:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+/* ==== */
+@media screen and (max-width: 575px){
+    .latest-info{
+        align-items: center;
+        margin-top: 20px;
+    }
 }
