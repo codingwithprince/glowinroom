@@ -5,7 +5,7 @@ import './Skincare.css';
 
 
 const infoData = [
-    { title: "For Oily skin", category: "Skincare", img: "images/skincare/oilyskin.png" },
+    { title: "For Oily skin", category: "oilyskin", img: "images/skincare/oilyskin.png" },
     { title: "For Dry Skin", category: "Skincare", img: "images/skincare/dryskin.jpg" },
     { title: "Facial", category: "Skincare", img: "images/skincare/facial.jpeg" },
     { title: "Full body", category: "Skincare", img: "images/skincare/bodycare.jpeg" }

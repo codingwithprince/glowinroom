@@ -1,0 +1,36 @@
+p{
+    text-align: justify;
+}
+img{
+    max-height: 500px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+.content-info{
+    margin-top: 50px;
+    text-align: left;
+}
+.content-text{
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 10px 20%;
+}
+.sm-title{
+    text-transform: uppercase;
+    padding: 20px 0;
+    font-weight: 700;
+}
+
+
+
+@media screen and (max-width: 990px) {
+        .content-info{
+            margin-top: 10px;
+        }
+    .content-text{
+        padding: 10px 5%;
+    }
+
+    
+}

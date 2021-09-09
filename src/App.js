@@ -8,6 +8,8 @@ import About from './components/About/About';
 import Skincare from './components/SkinCare/Skincare';
 import Footer from './components/Footer/Footer';
 import Hairstyle from './components/Hairstyle/Hairstyle';
+import Oilyskin from './pages/skincarePages/Oilyskin';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
             <Route exact path="/about" component={About} />
             <Route exact path="/skincare" component={Skincare} />
             <Route exact path="/hairstyle" component={Hairstyle} />
+            <Route exact path="/oilyskin" component={Oilyskin} />
           </Switch>
           <Footer />
       </Router>

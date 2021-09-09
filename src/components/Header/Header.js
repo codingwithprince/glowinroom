@@ -22,7 +22,7 @@ const Header = () => {
                             <Nav className="ms-auto">
                             <Nav.Link eventKey="1" as={Link} to="/">Home</Nav.Link>
                                 <NavDropdown title="Skincare" id="basic-nav-dropdown" >
-                                    <NavDropdown.Item eventKey="1"  as={Link} to="/skincare">Oily Skin</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="1"  as={Link} to="/oilyskin">Oily Skin</NavDropdown.Item>
                                     <NavDropdown.Item eventKey="1" as={Link} to="/skincare">Dry Skin</NavDropdown.Item>
                                     <NavDropdown.Item eventKey="1" as={Link} to="/skincare">Facial</NavDropdown.Item>
                                     <NavDropdown.Item eventKey="1" as={Link} to="/skincare">Body</NavDropdown.Item>
