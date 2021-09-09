@@ -1,57 +1,49 @@
 .section-title{
     text-align: left;
     font-weight: 600;
-    margin-bottom: 20px;
 }
 .latest-tip{
-    margin-top: 10px;
-    padding: 10px 0;
-    transition: 0.3s ease-in;
-}
-.latest-tip:hover{
-    background-color: rgb(246, 246, 246);
+    padding-top: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: left;
 }
 .latest-img img{
-    max-height: 200px;
+    max-width: 100%;
+    transition: 0.5s ease-in-out;
+}
+.latest-tip img:hover{
+    scale: 1.045;
+    border-radius: 5px;
+}
+.fullLink{
+    text-decoration: none;
 }
 .latest-info{
-    flex-direction: column;
-    text-align: left;
-    padding-left: 10px;
+   padding-left: 10px;
+   padding-top: 10px;
 }
-.innerInfo{
-    text-transform: capitalize;
+.category {
+    font-size: 14px;
+    color: #777;
+    text-decoration: none;
 }
-.title{
+.title {
+    text-decoration: none;
     color: #222;
     font-weight: 600;
+    text-transform: capitalize;
 }
-.category{
+.des{
+    text-transform: capitalize;
     color: #ff3659;
-    font-size: 15px;
-}
-.category:hover{
-    text-decoration: underline;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 13px;
 }
 .credit{
     color: #444;
-    font-size: 16px;
-}
-.des{
-    font-size: 14px;
-}
-.des:hover{
-    text-decoration: underline;
-}
-
-
-
-
-
-/* ==== */
-@media screen and (max-width: 575px){
-    .latest-info{
-        align-items: center;
-        margin-top: 20px;
-    }
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: capitalize;
 }
